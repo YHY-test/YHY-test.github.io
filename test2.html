@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>샛테스트</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="default.css">
+    <style>
+    #hbox {width:1000px; height:100px; color:white; line-height:100px; text-align:center; font-size:40px;}
+    .formbox{width:800px; height:520px; font-size:16px; margin:0 auto; color:white; margin-top:20px; line-height:28px;}
+    .formbox form{display:block; font-size:20px; float:left;}
+    .formbox button{background-color: white; color:rgb(87,100,177); font-size:16px; border:none; margin-top:10px;}
+    #expl{width:300px; height:540px; background-color: rgba(255, 255, 255, 0.4); position:absolute; top:100px; right:200px; font-size:12px; color:rgb(87,100,177); text-indent:10px;}
+    #expl p{margin:20px;}
+
+    </style>
+  </head>
+  <body>
+    <div class="mbox">
+      <div id="hbox"><h1>스릴러/공포</h1></div>
+      <div class="formbox">
+          1. 여성 감독의 작품인가?<br>
+          예 <input class="f1" type="radio" name="f1" value="5" checked>
+          아니오 <input class="f1" type="radio" name="0" value="0"><br>
+
+          2. 여성 작가의 작품인가?<br>
+          예 <input class="f2" type="radio" name="f2" value="5" checked>
+          아니오 <input class="f2" type="radio" name="f2" value="0"><br>
+
+          3. 여성 주연의 작품인가?<br>
+          예 <input class="f3" type="radio" name="f3" value="5" checked>
+          아니오 <input class="f3" type="radio" name="f3" value="0"><br>
+
+          4. 등장인물의 젠더가 인물의 행동이나 대사에 영향을 미치는가?<br>
+          예 <input class="f4" type="radio" name="f4" value="-10" checked>
+          아니오 <input class="f4" type="radio" name="f4" value="10"><br>
+
+          5. 여성 등장인물이 자신만의 서사를 가지고 있는 독자적인 인물인가?<br>
+          예 <input class="f5" type="radio" name="f5" value="10" checked>
+          아니오 <input class="f5" type="radio" name="f5" value="-10"><br>
+
+          6. 여성 등장인물의 서사가 남성 등장인물의 서사를 위해 존재하는가?<br>
+          예 <input class="f6" type="radio" name="f6" value="-10" checked>
+          아니오 <input class="f6" type="radio" name="f6" value="10"><br>
+
+          7. 불안을 형성하기 위해 여성 인물들에게 가학이 가해지는가? ?<br>
+          예 <input class="f7" type="radio" name="f7" value="-15" checked>
+          아니오 <input class="f7" type="radio" name="f7" value="5"><br>
+
+          8. 불안을 형성하는 요소로 피해자였던 여성이 등장하는가?<br>
+          예 <input class="f8" type="radio" name="f8" value="-15" checked>
+          아니오 <input class="f8" type="radio" name="f8" value="5"><br>
+
+          <button onclick="yhytest()">제출하기</button>
+      </div>
+      </div>
+      <div id="expl">
+        <br>
+        <p>
+          “장르적 재미를 위해 여성의 육체를 희생시키고 가학행위 앞에 던져진 여성의 공포를 볼거리로 만들고 있다는 점에서는 불손하다. 관객들에게 폭력을 즐기도록 부추기며, 김미진의 탈인격화에 관객들을 가담하게 만들고 있기 때문이다. 김미진이라는 여성은 이제 더 이상 존재하지 않는다. 잔혹하게 살해되고 그 육체는 조각나서 지영민의 시각적 향유물이 되어버렸다. 분절된 그녀의 신체는 서스펜스와 관음의 도구로만 쓰이고 있을 뿐이다.” (신정원, 2005)</p>
+          <p>“특히 공포영화는 여성을 비체(abject)로 재현하는데, 이는 당시 사회문화적으로 억압되었던 가치들을 여성이라는 상징적 기호와 연계해 일그러진 형상으로 표현한 것이다. 여성은 영화에서 주로 괴물, 시체, 귀신 등의 혐오의 대상으로 재현되면서 비체화(abjection)된다.”(박선아,2015)</p>
+          <p>공포와 스릴러 장르 모두 여성 피해자는 불안, 서스펜스 형성의 요소로 활용됩니다. 이는 여성에 대한 물상화가 이루어졌기 때문이라고 판단하여 문항을 작성하였습니다.</p>
+        <p style="font-size:10px; text-indent:0;">조수진. (2018). 영화텍스트를 통해 바라보는 한국 사회 속 여성 - 영화 &lt;추격자&gt;, &lt;소셜포비아&gt;, &lt;내부자들&gt;을 중심으로 . CONTENTS PLUS, 16(6), 45-57.<br>박선아 (2015). 아부젝시옹(abjection) 개념을 통해 본 2000년대 이후 한국 공포영화에 관한 연구. 영화연구(65), 81-108</p>
+      </div>
+
+    </div>
+    <ul id="menu">
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="test.html">TEST</a></li>
+      <li><a href="result.html">RESULT</a></li>
+      <li><a href="tests.html">TESTS</a></li>
+      <li><a href="contact.html" style="border:none;">CONTACT</a></li>
+    </ul>
+    <script>
+      var z = document.getElementById("result");
+      function yhytest(){
+        var x = 40;
+        var x1 = document.querySelector(".f1:checked");
+        var x2 = document.querySelector(".f2:checked");
+        var x3 = document.querySelector(".f3:checked");
+        var x4 = document.querySelector(".f4:checked");
+        var x5 = document.querySelector(".f5:checked");
+        var x6 = document.querySelector(".f6:checked");
+        var x7 = document.querySelector(".f7:checked");
+        var x8 = document.querySelector(".f8:checked");
+        var y = x + Number(x1.value) + Number(x2.value) + Number(x3.value) + Number(x4.value) + Number(x5.value) + Number(x6.value) + Number(x7.value) + Number(x8.value);
+        var k;
+        if (y<4){
+         window.alert("와… 진짜..?")
+        }else if(y<11){
+       window.alert("무슨 말을 해야할지 모르겠군요...")
+      }else if(y<23){
+       window.alert("안경 필요하세요?")
+      }else if(y<40){
+     window.alert("안심할 때가 아닐텐데요...")
+    }else if(y<60){
+     window.alert("중간은 되는 것 같네요...?")
+    }else if(y<77){
+ window.alert("노력이 빛을 발하는 군요!")
+}else if(y<89){
+     window.alert("이 영화, 세 번은 봐야겠어요!")
+    }else if(y<96){
+     window.alert("멋져요, 그래서 블루레이가 얼마라구요?")
+    }else{
+     window.alert("박수 👏👏👏 말이 필요없네요!")}
+    }
+    </script>
+  </body>
+</html>

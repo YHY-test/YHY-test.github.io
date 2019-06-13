@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>샛테스트</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="default.css">
+    <style>
+    #hbox {width:1000px; height:100px; color:white; line-height:100px; text-align:center; font-size:40px;}
+    .formbox{width:800px; height:520px; font-size:16px; margin:0 auto; color:white; margin-top:20px; line-height:28px;}
+    .formbox form{display:block; font-size:20px; float:left;}
+    .formbox button{background-color: white; color:rgb(87,100,177); font-size:16px; border:none; margin-top:10px;}
+    #expl{width:300px; height:300px; background-color: rgba(255, 255, 255, 0.4); position:absolute; top:180px; right:200px; font-size:12px; color:rgb(87,100,177); text-indent:10px;}
+    #expl p{margin:20px;}
+
+    </style>
+  </head>
+  <body>
+    <div class="mbox">
+      <div id="hbox"><h1>다큐멘터리</h1></div>
+      <div class="formbox">
+          1. 여성 감독의 작품인가?<br>
+          예 <input class="f1" type="radio" name="f1" value="5" checked>
+          아니오 <input class="f1" type="radio" name="0" value="0"><br>
+
+          2. 여성 작가의 작품인가?<br>
+          예 <input class="f2" type="radio" name="f2" value="5" checked>
+          아니오 <input class="f2" type="radio" name="f2" value="0"><br>
+
+          3. 여성 주연의 작품인가?<br>
+          예 <input class="f3" type="radio" name="f3" value="5" checked>
+          아니오 <input class="f3" type="radio" name="f3" value="0"><br>
+
+          4. 등장인물의 젠더가 인물의 행동이나 대사에 영향을 미치는가?<br>
+          예 <input class="f4" type="radio" name="f4" value="-10" checked>
+          아니오 <input class="f4" type="radio" name="f4" value="10"><br>
+
+          5. 여성 등장인물이 자신만의 서사를 가지고 있는 독자적인 인물인가?<br>
+          예 <input class="f5" type="radio" name="f5" value="10" checked>
+          아니오 <input class="f5" type="radio" name="f5" value="-10"><br>
+
+          6. 여성 등장인물의 서사가 남성 등장인물의 서사를 위해 존재하는가?<br>
+          예 <input class="f6" type="radio" name="f6" value="-10" checked>
+          아니오 <input class="f6" type="radio" name="f6" value="10"><br>
+
+          7. 여성이 겪고 있는 현실을 의도적으로 조명하는가?<br>
+          예 <input class="f7" type="radio" name="f7" value="15" checked>
+          아니오 <input class="f7" type="radio" name="f7" value="-5"><br>
+
+          8. 여성이 주체적으로 자신이 겪고 있는 현실의 문제를 이야기하는 것을 들을 수 있는가? <br>
+          예 <input class="f8" type="radio" name="f8" value="15" checked>
+          아니오 <input class="f8" type="radio" name="f8" value="-5"><br>
+
+          <button onclick="yhytest()">제출하기</button>
+      </div>
+      </div>
+      <div id="expl">
+        <br>
+        <p>
+          고전 다큐멘터리가 리얼리즘을 근거하여 객관적 보도와 사회적 쟁점에 집중했다. 하지만 포스트 다큐멘터리는 감독 개인의 실제 경험에 초점을 맞춘다. 다큐멘터리는 감독-작가가 자신의 시선으로 현실을 재해석한 결과라고 볼 수 있다 (김숙현&amp;이효민, 2018). 현실을 그대로 반영하는 것은 불가능하다는 판단 아래에 다큐멘터리는 구성된 세계를 보여주는 영상입니다. 따라서 영상이 의도하는 바가 여성의 현실과 밀접해야 한다고 판단하여 작성한 문항들입니다.</p><br>
+        <p style="font-size:10px;">김숙현, 이효민 (2018). 사적 다큐멘터리의 서사적 경향 및 특성. 미디어, 젠더 & 문화, 33(2), 45-86</p>
+      </div>
+    </div>
+    </div>
+    <ul id="menu">
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="test.html">TEST</a></li>
+      <li><a href="result.html">RESULT</a></li>
+      <li><a href="tests.html">TESTS</a></li>
+      <li><a href="contact.html" style="border:none;">CONTACT</a></li>
+    </ul>
+    <script>
+      var z = document.getElementById("result");
+      function yhytest(){
+        var x = 40;
+        var x1 = document.querySelector(".f1:checked");
+        var x2 = document.querySelector(".f2:checked");
+        var x3 = document.querySelector(".f3:checked");
+        var x4 = document.querySelector(".f4:checked");
+        var x5 = document.querySelector(".f5:checked");
+        var x6 = document.querySelector(".f6:checked");
+        var x7 = document.querySelector(".f7:checked");
+        var x8 = document.querySelector(".f8:checked");
+        var y = x + Number(x1.value) + Number(x2.value) + Number(x3.value) + Number(x4.value) + Number(x5.value) + Number(x6.value) + Number(x7.value) + Number(x8.value);
+        var k;
+        if (y<4){
+         window.alert("와… 진짜..?")
+        }else if(y<11){
+       window.alert("무슨 말을 해야할지 모르겠군요...")
+      }else if(y<23){
+       window.alert("안경 필요하세요?")
+      }else if(y<40){
+     window.alert("안심할 때가 아닐텐데요...")
+    }else if(y<60){
+     window.alert("중간은 되는 것 같네요...?")
+    }else if(y<77){
+ window.alert("노력이 빛을 발하는 군요!")
+}else if(y<89){
+     window.alert("이 영화, 세 번은 봐야겠어요!")
+    }else if(y<96){
+     window.alert("멋져요, 그래서 블루레이가 얼마라구요?")
+    }else{
+     window.alert("박수 👏👏👏 말이 필요없네요!")}
+    }
+    </script>
+  </body>
+</html>
